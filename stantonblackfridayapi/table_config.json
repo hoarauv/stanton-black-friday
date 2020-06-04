@@ -1,0 +1,8 @@
+{
+    "items":"items.csv",
+    "item_types":"item_types.csv",
+    "trade_options":"trade_options.csv",
+    "component_infos":"ship_component_infos.csv",
+    "component_types":"component_types.csv",
+    "component_classes":"component_classes.csv"
+}
