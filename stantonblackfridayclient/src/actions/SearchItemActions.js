@@ -11,5 +11,7 @@ export const SEARCH_ITEM_FAILURE = 'SEARCH_ITEM_FAILURE';
  */
 
 export const searchItem = (data) => ({type: SEARCH_ITEM, data});
-export const searchItemResponse = (data) => ({type: SEARCH_ITEM_RESPONSE, data: data});
+export const searchItemResponse = (data) => ({
+  type: SEARCH_ITEM_RESPONSE, data: data,
+});
 export const searchItemFailure = () => ({type: SEARCH_ITEM_FAILURE});

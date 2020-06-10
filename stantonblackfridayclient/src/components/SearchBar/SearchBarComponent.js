@@ -3,7 +3,17 @@ import {IconButton, Toolbar, AppBar, TextField} from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import PropTypes from 'prop-types';
 
+/**
+ * Represents the component used as the view of a search bar
+ * The action resulting on the validation of the search can be provided through
+ * the prop variable: onSearch
+ */
 export default class SearchBarComponent extends Component {
+  /**
+   * Renders the component
+   * @return {ReactNode} - The react node to be displayed to show the search
+   *  bar
+   */
   render() {
     return (
       <AppBar position="relative" color="secondary">

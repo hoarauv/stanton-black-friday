@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import MainPaperComponent from '../MainPaperComponent';
+import {MainPaperComponent} from '../MainPaperComponent';
 import {Button, Typography} from '@material-ui/core';
 import {NavLink} from 'react-router-dom';
 
@@ -12,7 +12,14 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
 });
 
+/**
+ * Represent the view which you land on when you use a wrong url
+ */
 class InvalidRouteContainer extends React.Component {
+  /**
+   * Renders the view
+   * @return {ReactNode} - The react node to render
+   */
   render() {
     return (
       <MainPaperComponent>
@@ -24,11 +31,19 @@ class InvalidRouteContainer extends React.Component {
                         Quick ! Here is a shortcut ! Come back to safety !
           </Typography>
           <Typography style={{marginTop: 15}}>
-            <img alt="Wrong page genius" src={UserLostImage} style={{height: '35vh'}}/>
+            <img
+              alt="Wrong page genius"
+              src={UserLostImage}
+              style={{height: '35vh'}}
+            />
           </Typography>
           <NavLink to="/home" style={{textDecoration: 'none'}}>
-            <Button color="primary" variant="contained" style={{marginTop: 15}}>
-                            Go back to safety
+            <Button
+              color="primary"
+              variant="contained"
+              style={{marginTop: 15}}
+            >
+              Go back to safety
             </Button>
           </NavLink >
         </div>
@@ -37,4 +52,7 @@ class InvalidRouteContainer extends React.Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(InvalidRouteContainer);
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps,
+)(InvalidRouteContainer);

@@ -6,10 +6,11 @@ import SearchItemContainer from './components/SearchItem/SearchItemContainer';
 import {Provider} from 'react-redux';
 import {rootReducer} from './reducers/rootReducer';
 import {createStore, applyMiddleware} from 'redux';
-import HeaderBar from './components/HeaderBar';
+import {HeaderBar} from './components/HeaderBar';
 import createSagaMiddleware from 'redux-saga';
 import rootSaga from './saga/rootSaga';
-import InvalidRouteContainer from './components/InvalidRoute/InvalidRouteContainer';
+import InvalidRouteContainer from
+  './components/InvalidRoute/InvalidRouteContainer';
 import {composeWithDevTools} from 'redux-devtools-extension';
 
 const sagaMiddleware = createSagaMiddleware();
@@ -22,7 +23,7 @@ const store = createStore(
 sagaMiddleware.run(rootSaga);
 
 /**
- * @return {any} The view displayed to the user
+ * @return {ReactNode} The view displayed to the user
  */
 function App() {
   return (
